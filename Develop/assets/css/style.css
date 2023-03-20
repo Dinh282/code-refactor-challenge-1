@@ -8,6 +8,16 @@ body {
     background-color: #d9dcd6;
 }
 
+/*Selectors a and p moved here, below the body selector, for better organization. */ 
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+p {
+    font-size: 16px;
+}
+
 .header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -33,7 +43,7 @@ body {
 }
 /*div selector has to be updated to nav since it was changed in the html file for HTML semantic */
 .header nav ul {
-    list-style-type: none;
+    list-style-type: none ;
 }
 /*div selector has to be updated to nav since it was changed in the html file for HTML semantic */
 .header nav ul li {
@@ -41,22 +51,18 @@ body {
     margin-left: 25px;
 }
 
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-p {
-    font-size: 16px;
-}
 
 .hero {
     height: 800px;
     width: 100%;
     margin-bottom: 25px;
+    /*The three backgorund properties can be written as shorthand CSS property */
+    background: url("../images/digital-marketing-meeting.jpg") center/100%;
+    /*
     background-image: url("../images/digital-marketing-meeting.jpg");
     background-size: cover;
     background-position: center;
+    */
 }
 
 .float-left {
@@ -84,8 +90,20 @@ p {
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
+
 }
 
+/*Consolidate the three selectors with indentical decalarations.This 
+helps with avoiding redundancy. Remember to practice DRY(Don't Repeat 
+Yourself) coding.
+The following is an example of grouping of selectors*/
+
+.benefit-lead, .benefit-brand, .benefit-cost {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+/*
 .benefit-lead {
     margin-bottom: 32px;
     color: #ffffff;
@@ -100,11 +118,23 @@ p {
     margin-bottom: 32px;
     color: #ffffff;
 }
+*/
 
+/*Consolidate the three selectors with indentical decalarations.
+Since the three h3's are the same and are descendants of .benefits, we
+can use .benefits h3. We can actually just use h3, since the entire page 
+only have these three h3's*/
+.benefits h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/*
 .benefit-lead h3 {
     margin-bottom: 10px;
     text-align: center;
 }
+
 
 .benefit-brand h3 {
     margin-bottom: 10px;
@@ -115,7 +145,15 @@ p {
     margin-bottom: 10px;
     text-align: center;
 }
+*/
 
+.benefits img{
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+
+/*
 .benefit-lead img {
     display: block;
     margin: 10px auto;
@@ -133,7 +171,20 @@ p {
     margin: 10px auto;
     max-width: 150px;
 }
+*/
 
+/*All section children of main share the same property:values. Instead 
+of listing each out, we create the css rule of .content section. */
+.content section {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+/*
 .search-engine-optimization {
     margin-bottom: 20px;
     padding: 50px;
@@ -160,7 +211,13 @@ p {
     background-color: #0072bb;
     color: #ffffff;
 }
+*/
 
+ .content section img {
+    max-height: 200px;
+}
+
+/*
 .search-engine-optimization img {
     max-height: 200px;
 }
@@ -172,11 +229,19 @@ p {
 .social-media-marketing img {
     max-height: 200px;
 }
+*/
 
+.content section h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/*
 .search-engine-optimization h2 {
     margin-bottom: 20px;
     font-size: 36px;
 }
+
 
 .online-reputation-management h2 {
     margin-bottom: 20px;
@@ -187,6 +252,7 @@ p {
     margin-bottom: 20px;
     font-size: 36px;
 }
+*/
 
 .footer {
     padding: 30px;

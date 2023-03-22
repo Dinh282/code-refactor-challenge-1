@@ -14,10 +14,17 @@ N/A
 None required. Just access HTML and CSS files to examine the codes.
 
 ## Usage
-1. Access the repository from https://github.com/Dinh282/code-refactor-challenge-1.git. 
+1. Access the repository from https://github.com/Dinh282/.code-refactor-challenge-1.git. 
 2. Clone repo to local machine.
 3. Examine html file with VS Code using live server extensions. 
-4. Inspect element from the web browser to view and edit the website source code.
+4. Inspect element from the web browser to view and edit the website's source code.
+
+Alternatively:
+1. Visit https://dinh282.github.io/code-refactor-challenge-1/.
+2. Inspect element from the web browser to view and edit the website's source code.
+
+Image of webpage:
+![image of Horiseon webpage](./docs/assets/images/horiseon-webpage.png)
 
 ## Credits
 List of useful webpages that aid in the completetion of this project. 
